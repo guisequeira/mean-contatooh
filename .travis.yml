@@ -15,4 +15,4 @@ before_script:
 - grunt
 - cd dist
 script:
-- karma start config/karma.config.js --single-rum --browser PhantomJS
+- karma start config/karma.config.js --single-run --browser PhantomJS
