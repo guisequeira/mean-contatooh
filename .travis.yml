@@ -1,8 +1,7 @@
 language: node_js
 node_js:
 - 0.10
-script:
-- karma start config/karma.config.js --single-run --browser PhantomJS
+
 notifications:
 - guisequeira@hotmail.com
 sudo: true
