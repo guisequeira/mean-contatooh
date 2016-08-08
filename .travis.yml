@@ -7,7 +7,7 @@ service:
 - mongodb
 env:
 	global:
-		- NODE_ENV: test
+		NODE_ENV: test
 addons:
 	souce_connect: true
 before_install:
