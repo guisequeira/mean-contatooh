@@ -8,7 +8,7 @@ exports.config = {
 		'browserName': 'chrome',
 		'tunnel-identifier': config.travisJobNumber,
 		'build': config.travisBuild
-	}
+	},
 	
 	specs: ['../test/e2e/**/*.js'],
 	onPrepare: function(){
