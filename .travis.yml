@@ -7,7 +7,7 @@ services:
   - mongodb
 env:
   global:
-    - NODE_ENV: test
+    - NODE_ENV=test
 addons:
   sauce_connect: true
 before_install:
