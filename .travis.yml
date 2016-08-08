@@ -3,13 +3,13 @@ notifications:
   email: guisequeira@hotmail.com
 node_js:
 - 0.10
-service: 
-- mongodb
+services: 
+  - mongodb
 env:
   global:
     - NODE_ENV: test
 addons:
-  souce_connect: true
+  sauce_connect: true
 before_install:
 - npm install -g bower@1.3
 - npm install -g grunt-cli@0.1
@@ -25,5 +25,3 @@ script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
 - node server &
 - protractor config/protractor.js
-
-
