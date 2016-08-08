@@ -1,13 +1,13 @@
 language: node_js
 notifications:
-	email: guisequeira@hotmail.com
+	- email: guisequeira@hotmail.com
 node_js:
 - 0.10
 service:
 - mongodb
 env:
 	global:
-		NODE_ENV: test
+		- NODE_ENV: test
 addons:
 	souce_connect: true
 before_install:
