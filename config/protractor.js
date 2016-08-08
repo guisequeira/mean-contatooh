@@ -9,6 +9,8 @@ exports.config = {
     platformName: 'iOS',
     platformVersion: '7.1',
     deviceName: 'iPhone Simulator',
+    'tunnel-identifier': config.travisJobNumber,
+		'build': config.travisBuild
 	},
 	
 	specs: ['../test/e2e/**/*.js'],
