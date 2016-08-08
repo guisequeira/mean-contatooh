@@ -21,9 +21,9 @@ var contatoPage = function(){
 	}
 
 	this.selecionarPrimeiraEmergenciaDaLista = function(){
-		element(by.css('option[value="0"]')).click();
+		element(by.xpath('//*[@id="emergencia"]/option[2]')).click();
 	}
-
+// 
 }
 
 module.exports = contatoPage;

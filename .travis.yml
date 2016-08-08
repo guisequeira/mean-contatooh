@@ -1,4 +1,10 @@
 language: node_js
+env:
+	global:
+		NODE_ENV: test
+addons:
+	souce_connect: true
+
 node_js:
 - 0.10
 
@@ -17,4 +23,8 @@ before_script:
 - grunt
 script:
 - karma start config/karma.config.js --single-run --browsers PhantomJS
+- node server &
+- protractor config/protractor.js
+service:
+- mongodb
 
