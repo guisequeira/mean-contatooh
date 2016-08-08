@@ -4,8 +4,7 @@ notifications:
       guisequeira@hotmail.com
 node_js:
 - 0.10
-service:
-- mongodb
+service: mongodb
 env:
   global:
     NODE_ENV: test
