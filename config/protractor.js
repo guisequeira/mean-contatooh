@@ -3,57 +3,13 @@ var config = require('../app/config/config')();
 exports.config = {
 	sauceUser: config.sauceUser,
 	sauceKey: config.sauceKey,
-	// capabilities: {
-	// 	'name': config.sauceTestName,
-	// 	'browserName': 'chrome',
-	// 	'tunnel-identifier': config.travisJobNumber,
-	// 	'build': config.travisBuild
-	// },
-	maxSessions: 10,
-	multiCapabilities: [
-	    {
-	        browserName: 'internet explorer',
-	        version: '10',
-	        shardTestFiles: true,
-	        maxInstances: 3,
-	        'screen-resolution': '1024x768',
-	        build: config.travisBuild
-	    },
-	    {
-	        browserName: 'internet explorer',
-	        version: '8',
-	        platform: 'Windows XP',
-	        shardTestFiles: true,
-	        maxInstances: 10,
-	        'screen-resolution': '1024x768',
-	        build: config.travisBuild
-	    },
-	    {
-	        browserName: 'firefox',
-	        platform: 'Windows 8',
-	        shardTestFiles: true,
-	        maxInstances: 3,
-	        'screen-resolution': '1024x768',
-	        build: config.travisBuild
-	    },
-	    {
-	        browserName: 'safari',
-	        version: '7',
-	        platform: 'OS X 10.9',
-	        shardTestFiles: true,
-	        maxInstances: 3,
-	        'screen-resolution': '1024x768',
-	        build: config.travisBuild
-	    },
-	    {
-	        browserName: 'chrome',
-	        platform: 'Windows 8.1',
-	        shardTestFiles: true,
-	        maxInstances: 3,
-	        'screen-resolution': '1024x768',
-	        build: config.travisBuild
-	    }
-	],
+	capabilities: {
+		browserName: 'safari',
+    'appium-version': '1.0',
+    platformName: 'iOS',
+    platformVersion: '7.1',
+    deviceName: 'iPhone Simulator',
+	},
 	
 	specs: ['../test/e2e/**/*.js'],
 	onPrepare: function(){
