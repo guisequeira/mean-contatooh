@@ -9,28 +9,50 @@ exports.config = {
 	// 	'tunnel-identifier': config.travisJobNumber,
 	// 	'build': config.travisBuild
 	// },
-	multiCapabilities:[
-		{
-			platformName: 'iOS',
-			platformVersion: '7.1',
-			browserName: '',
-			app: 'safari',
-			deviceName: 'iPhone Simulator', 
-			'appium-version': '1.4.0',
-		},
-		{
-			platformName: 'Android',
-			platformVersion: '4.4',
-			browserName: 'Browser',
-			deviceName: 'Android Emulator', 
-			'appium-version': '1.4.0',
-		},
-		{
-			'name': config.sauceTestName,
-			'browserName': 'chrome',
-			'tunnel-identifier': config.travisJobNumber,
-			'build': config.travisBuild
-		}
+	maxSessions: 10,
+	multiCapabilities: [
+	    {
+	        browserName: 'internet explorer',
+	        version: '10',
+	        shardTestFiles: true,
+	        maxInstances: 3,
+	        'screen-resolution': '1024x768',
+	        build: config.travisBuild
+	    },
+	    {
+	        browserName: 'internet explorer',
+	        version: '8',
+	        platform: 'Windows XP',
+	        shardTestFiles: true,
+	        maxInstances: 10,
+	        'screen-resolution': '1024x768',
+	        build: config.travisBuild
+	    },
+	    {
+	        browserName: 'firefox',
+	        platform: 'Windows 8',
+	        shardTestFiles: true,
+	        maxInstances: 3,
+	        'screen-resolution': '1024x768',
+	        build: config.travisBuild
+	    },
+	    {
+	        browserName: 'safari',
+	        version: '7',
+	        platform: 'OS X 10.9',
+	        shardTestFiles: true,
+	        maxInstances: 3,
+	        'screen-resolution': '1024x768',
+	        build: config.travisBuild
+	    },
+	    {
+	        browserName: 'chrome',
+	        platform: 'Windows 8.1',
+	        shardTestFiles: true,
+	        maxInstances: 3,
+	        'screen-resolution': '1024x768',
+	        build: config.travisBuild
+	    }
 	],
 	
 	specs: ['../test/e2e/**/*.js'],
