@@ -1,15 +1,16 @@
 language: node_js
 notifications:
-	- email: guisequeira@hotmail.com
+  - email: 
+      guisequeira@hotmail.com
 node_js:
 - 0.10
 service:
 - mongodb
 env:
-	global:
-		- NODE_ENV: test
+  global:
+    NODE_ENV: test
 addons:
-	souce_connect: true
+  souce_connect: true
 before_install:
 - npm install -g bower@1.3
 - npm install -g grunt-cli@0.1
