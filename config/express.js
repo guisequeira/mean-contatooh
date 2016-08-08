@@ -5,7 +5,7 @@ var helmet = require('helmet');
 // 
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var passport = require('passport');
+// var passport = require('passport');
 
 module.exports = function () {
 	var app = express();
@@ -39,10 +39,11 @@ module.exports = function () {
 	app.use(express.static('./public'));
 	app.set('view engine', 'ejs');
 	app.set('views', './app/views');
+
 	// middlewares bodyParser
 	app.use(bodyParser.urlencoded({extend: true}));
 	app.use(bodyParser.json());
-	app.use(require('method-override')())
+	app.use(require('method-override')());
 
 
 	load('models', {cwd: 'app'})
